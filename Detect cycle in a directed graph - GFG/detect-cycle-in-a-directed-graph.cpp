@@ -5,7 +5,7 @@ using namespace std;
 // } Driver Code Ends
 class Solution {
   public:
-   bool dfs(int i , vector<int> adj[] , vector<int>&vis , vector<int>&path)
+   bool dfs(int i , vector<int> adj[] , vector<int>&vis , vector<int> &path)
    {
        vis[i] = 1;
        path[i] = 1;
@@ -16,7 +16,7 @@ class Solution {
                vis[node] = 1;
                path[node] = 1;
                if(dfs(node , adj , vis , path)) return true;
-               path[node] = 0;
+               path[node] =0;
            }
            
            else if(path[node] == 1 ) return true;
